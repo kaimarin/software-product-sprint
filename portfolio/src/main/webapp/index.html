@@ -5,15 +5,54 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/13dae45c68.js" crossorigin="anonymous"></script>
   </head>
+  <header>
+    <h2 id="heading">Kai's Portfolio</h2>
+    <nav>
+      <ul class="nav-bar">
+        <li class="nav-link"><a href="index.html">About Me</a></li>
+        <li class="nav-link"><a href="projects.html">Projects</a></li>
+        <li class="nav-link"><a href="sps.html">SPS Experience</a></li>
+      </ul>
+    </nav>
+
+  </header>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
+    <section id="intro">
+      <img id="prof-pic" src="images/uwpic.jpg" alt="a picture of me in a thunderstorm"/>
+      <div id="intro-par">
+        <h2>A little about me...</h2>
+        <p>
+          What's up! My name is Kai. I was born in New York City, and moved to Seattle when I
+          was 8 years old. I love playing basketball, hanging out with
+          friends and playing video games.
+        </p>
+        <p>
+          I go to the University of Washington, where I study Computer Science.  Before coming to
+          college, I knew next to nothing about coding! Once I took my first introductory CSE course,
+          I realized how interesting and fun it can be and so I decided to major in it and now
+          currently aspire to be a software engineer.  I am very excited to be in the SPS program
+          and know I will learn a lot this summer!
+        </p>
+      </div>
+    </section>
+    <hr>
+    <section id="show-section">
+      <p id="button-p">
+        Click on this button to see a random one of my favorite shows and why I like it!
+      </p>
+      <div id="shows">
+        <button onclick="getShows()" style="vertical-align:middle"><span>Shows</span></button>
+        <div id="shows-container"></div>
+      </div>
+    </section>
+    <footer>
+      <a href="https://github.com/kaimarin" class="fab fa-github" target="_blank"></a>
+      <a href="https://www.instagram.com/kai.a.marin/" class="fab fa-instagram"target="_blank"></a>
+      <a href="https://www.linkedin.com/in/kai-marin/" class="fab fa-linkedin" target="_blank"></a>
+    </footer>
   </body>
 </html>

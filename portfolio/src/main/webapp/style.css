@@ -1,9 +1,159 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(29, 48, 61);
+  color: whitesmoke;
+  width: 60%;
+  margin: auto;
+  font-size:20px;
+}
+
+h2 {
+  font-size: 30px;
+}
+h3 {
+  text-align: center;
+}
+
+header {
+  display: flex;
+  margin: auto;
+  height: 92px;
+  align-items: center;
+}
+
+#heading {
+  flex: 1;
+}
+
+nav {
+  flex: 2;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#intro {
+  display: flex;
+}
+
+#intro-par {
+  margin: 0 auto auto 2%;
 }
 
 #greeting-container {
+margin-top: 20px;
+}
+
+#prof-pic {
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  border-radius: 50px;
+}
+
+.fa, .fab {
+  padding: 20px;
+  font-size: 45px;
+  text-align: center;
+}
+
+.fa:hover, .fab:hover {
+  color:rgb(165, 165, 165);
+}
+
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  position: absolute;
+  margin: auto;
+  margin-left: 25%;
+  bottom:20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li > a {
+  padding : 1em;
+}
+li > a:hover {
+  background-color: rgb(27, 40, 49);
+}
+
+button {
+  margin: auto 0 auto 20px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(62, 102, 131);
+  border: none;
+  color: #FFFFFF;
+  font-size: 28px;
+  padding: 20px;
+  width: 150px;
+  height: 72px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+button:hover span {
+  padding-right: 25px;
+}
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#button-p {
+  text-align: center;
+}
+
+#shows {
+  display: flex;
+  height: 300px;
+}
+
+#shows-container {
+  display: flex;
+}
+
+#shows-container > p {
+  margin-left: 30px;
   margin-top: 20px;
+  width: 450px;
+}
+
+img {
+  margin-left: 40px;
+  width: 400px;
+  height: 255px;
+  border-radius: 10px;
+}
+
+#camp-nav {
+  width: 800px;
+  height: 462.5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
