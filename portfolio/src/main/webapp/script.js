@@ -16,7 +16,8 @@
  * Adds a random greeting to the page.
  */
  function getShows() {
-  clearQuotes();
+  const showsContainer = document.getElementById('shows-container');
+  removeChildren(showsContainer);
   const imgs = ["images/IMG-9491.jpg", "images/IMG-9492.jpg", "images/IMG-9493.jpg",
                 "images/IMG-9494.jpg"];
   const office = "A show I can watch over and over and it's hilarious every time";
@@ -31,7 +32,6 @@
   const p = pars[index];
 
   // Add it to the page.
-  const showsContainer = document.getElementById('shows-container');
   let image = document.createElement("img");
   image.src = src;
   let par = document.createElement("p");
@@ -44,10 +44,23 @@
 /**
  * Clears the current quote
  */
-function clearQuotes() {
-  const showsContainer = document.getElementById('shows-container');
-  if (showsContainer.firstChild) {
-    showsContainer.removeChild(showsContainer.firstChild);
-    showsContainer.removeChild(showsContainer.firstChild);
+function removeChildren(container) {
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
   }
+}
+
+/**
+ * Makes a request to server and retrieves message
+ */
+async function getMessage() {
+    const container = document.getElementById("server-req");
+    removeChildren(container)
+    
+    const srvrResp = await fetch("/hello");
+    const txtResp = await srvrResp.text();
+    
+    const p = document.createElement("p");
+    p.textContent = txtResp;
+    container.appendChild(p);
 }

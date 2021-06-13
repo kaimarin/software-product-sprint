@@ -135,7 +135,7 @@ button:hover span:after {
   height: 300px;
 }
 
-#shows-container {
+#shows-container, #server-container {
   display: flex;
 }
 
@@ -143,6 +143,10 @@ button:hover span:after {
   margin-left: 30px;
   margin-top: 20px;
   width: 450px;
+}
+
+#server-req {
+    margin-left: 20%;
 }
 
 img {
