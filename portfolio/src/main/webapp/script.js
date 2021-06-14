@@ -58,9 +58,10 @@ async function getMessage() {
     removeChildren(container)
     
     const srvrResp = await fetch("/hello");
-    const txtResp = await srvrResp.text();
-    
+    const json = await srvrResp.json();
+    console.log(json);
+    const index = Math.floor(Math.random() * json.length);
     const p = document.createElement("p");
-    p.textContent = txtResp;
+    p.textContent = json[index];
     container.appendChild(p);
 }
