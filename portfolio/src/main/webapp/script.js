@@ -15,9 +15,9 @@
 /**
  * Adds a random greeting to the page.
  */
- function getShows() {
+function getShows() {
   const showsContainer = document.getElementById('shows-container');
-  removeChildren(showsContainer);
+  showsContainer.replaceChildren();
   const imgs = ["images/IMG-9491.jpg", "images/IMG-9492.jpg", "images/IMG-9493.jpg",
                 "images/IMG-9494.jpg"];
   const office = "A show I can watch over and over and it's hilarious every time";
@@ -42,11 +42,11 @@
 }
 
 /**
- * Clears the current quote
+ * Removes the children of given parent
  */
-function removeChildren(container) {
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
+function removeChildren(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
   }
 }
 
@@ -55,8 +55,7 @@ function removeChildren(container) {
  */
 async function getMessage() {
     const container = document.getElementById("server-req");
-    removeChildren(container)
-    
+    container.replaceChildren();    
     const srvrResp = await fetch("/hello");
     const json = await srvrResp.json();
     console.log(json);
